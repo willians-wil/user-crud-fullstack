@@ -1,12 +1,88 @@
-# React + Vite
+# 🧩 First Project with React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o **meu primeiro projeto desenvolvido com React**, criado como parte do meu aprendizado em **desenvolvimento Front-end**.  
+O objetivo foi colocar em prática conceitos fundamentais do React, como **componentização, rotas, hooks e consumo de API**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+- ⚛️ **React**
+- 🧭 **React Router DOM**
+- 💅 **Styled Components**
+- ⚙️ **Vite**
+- 📡 **Axios**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📚 Aprendizados
+
+Durante o desenvolvimento deste projeto, pratiquei:
+- Estruturação de um projeto React com Vite  
+- Criação e reutilização de componentes funcionais  
+- Estilização com Styled Components  
+- Navegação entre páginas com React Router  
+- Uso de **useState** e **useEffect**  
+- Consumo de APIs com Axios  
+
+---
+
+## 🖥️ Funcionalidades
+
+- Exibição de uma lista de usuários  
+- Consumo de uma API simulada para obter dados  
+- Navegação entre páginas (Home e Lista de Usuários)  
+- Interface simples e responsiva  
+
+---
+
+## 📂 Estrutura do Projeto
+
+src/
+┣ 📁 assets
+┣ 📁 components
+┣ 📁 pages
+┣ 📁 services
+┣ 📁 styles
+┣ 📜 main.jsx
+┗ 📜 routes.jsx
+
+
+
+---
+
+## ⚙️ Como Rodar o Projeto
+
+```bash
+# Clone este repositório
+git clone https://github.com/willians-wil/first-project-with-react.git
+
+# Acesse a pasta do projeto
+cd first-project-with-react
+
+# Instale as dependências
+npm install
+
+# Inicie o servidor local
+npm run dev
+
+O projeto estará disponível em:
+👉 http://localhost:5173
+
+🧠 Próximos Passos
+
+Adicionar novas rotas e componentes
+
+Integrar uma API real
+
+Implementar validação de formulários
+
+Publicar o projeto online (Vercel ou Netlify)
+
+👨‍💻 Autor
+
+Willians Narcizzo
+📍 Desenvolvedor Front-end em formação
+💼 Meu GitHub
+
+⭐ Se você gostou, não esqueça de deixar uma estrela no repositório!
