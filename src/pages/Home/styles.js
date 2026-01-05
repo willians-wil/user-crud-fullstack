@@ -37,7 +37,7 @@ export const Input = styled.input`
   border: 1px solid #d2dae2;
   background-color: #fff;
   padding: 12px 20px;
-  outline: none; //Remove o destaque visual (como uma linha azul) 
+  outline: none; //Remove o destaque visual (como uma linha azul)
   width: 100%;
   margin-top: 3px;
 `;

@@ -24,7 +24,7 @@ function ListUsers() {
   const [users, setUsers] = useState([]); //Estado do React (Toda vez que eu quero alterar algo na tela, visualmente fazer uma alteração na DOM)
   const navigate = useNavigate();
   //Estrutura do useEffect (Acessar uma api com async e await, usar essa estrutura)
-  useEffect(() => {
+  useEffect(() => { ////Toda vez que a tela carrega, o useEffect é chamado ou seja toda vez que uma determinada variável MUDA de valor, ele é chamado
     async function getUsers() {
       //Busco os dados na api
       const { data } = await api.get("/usuarios"); //Mostra somente a informação de nome, idade e email, ou seja só os dados
@@ -35,18 +35,23 @@ function ListUsers() {
     getUsers();
   }, []);
   //funcão na condição de deletar usuário
-  async function deleteUsers(id) {
-    // Buscar os dados na API
-    await api.delete(`/usuarios/${id}`); //Coloco uma variável que é o meu id &()
+   async function handleDeleteUser(id) {
+  const confirmDelete = window.confirm( //window.confirm Mostra uma caixa de confirmação, e espera o usuário responder
+    "Tem certeza que deseja excluir este usuário?"
+  )
+  if (!confirmDelete) return //se confirmDelete não foi confirmado "return" pare tudo
 
-    const updateUsers = users.filter((user) => user.id !== id);
-    // O código cria uma nova lista chamada updateUsers essa nova lista terá todos os usuários, exceto aquele cujo id é igual ao id passado ou seja, ele remove da lista o usuário com o id especificado.
-
-    setUsers(updateUsers);
+  try{
+    await api.delete(`/usuarios/${id}`)
+    setUsers(prevUsers =>
+      prevUsers.filter(user => user.id !==id) //O id deste usuário é diferente do id que eu quero remover? Só mantenha o usuário cujo id seja DIFERENTE do id que foi deletado
+    )
+  }catch(error){
+  console.error("Erro ao deletar usuário", error)
   }
+}
 
-  //Toda vez que a tela carrega, o useEffect é chamado
-  //Toda vez que uma determinada variável MUDA de valor, ele é chamado
+   
   return (
     <Container>
       <TopBackground />
@@ -75,7 +80,7 @@ function ListUsers() {
               <TrashIcon
                 src={Trash}
                 alt="icone-lixo"
-                onClick={() => deleteUsers(user.id)}
+                onClick={() => handleDeleteUser(user.id)}
               />
             </CardUsers>
           )
@@ -94,3 +99,4 @@ function ListUsers() {
 
 export default ListUsers;
 //Eu posso usar o button criado e usá-lo em qualquer parte da minha aplicação
+

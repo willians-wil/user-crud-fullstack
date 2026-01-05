@@ -3,16 +3,20 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import ListUsers from "./pages/ListUsers";
-
+import Edituser from "./pages/EditUser";
 const router = createBrowserRouter([
   {
-    path: "/", //É o endereço que ficará em cima do navegador, é a raiz do me projeto
+    path: "/", //É o endereço que ficará em cima do navegador, é a raiz do meu projeto
     element: <Home />, //Qual elemento irei chamar nesse caso é o elemento que está dentro do indx.jsx
   },
   {
-    path: "/lista-de-usuarios", //Está é a minha nova página
+    path: "/list-users", //Está é a minha nova página
     element: <ListUsers />,
   },
+  {
+  path: "/edit-user/:id",
+  element: <Edituser />
+  }
 ]);
 
 export default router;

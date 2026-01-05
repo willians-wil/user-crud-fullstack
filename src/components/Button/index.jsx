@@ -8,7 +8,7 @@ function DefaultButton({ children, theme, ...props }) {
   
   //console.log(props); Aonde estava retornando as propriedades 
   
-  //functio DefaultButton (info)
+  //function DefaultButton (info)
   // console.log(info);
   return (
     <Button {...props} theme={theme}>

@@ -7,6 +7,7 @@ import { Container, Form, ContainerInputs, InputLabel, Input } from "./styles";
 import Title from "../../components/Title";
 import Button from "../../components/Button";
 import TopBackground from "../../components/TopBackground";
+import { handleApiError } from "../../utils/handlerApiError";
 const Home = () => {
   const inputName = useRef();
   const inputAge = useRef(); //Três variaveis pois se trata de uma variável para cada name, age e email
@@ -17,20 +18,27 @@ const Home = () => {
   async function registerNewUser() {
     //console.log(input.naem.current.value)
     //Toda vez que eu for buscar uma informação no banco de dados devo usar o async e o await
-    const data = await api.post("/usuarios", {
-      email: inputEmail.current.value, //Vou enviar um dado com nome email e dentro dele eu vou guardar a informação de inputEmail
+    try {
+      const { data } = await api.post("/usuarios", {
+        email: inputEmail.current.value, //Vou enviar um dado com nome email e dentro dele eu vou guardar a informação de inputEmail
 
-      age: parseInt(inputAge.current.value), //Vou enviar um dado com nome age e dentro dele eu vou guardar a informação de inputAge
-      //parseInt vai transformar tudo que estiver aqui dentro em um Int(inteiro) tranformando a string em inteiro, pois só assim o back end não dará problema
+        age: parseInt(inputAge.current.value), //Vou enviar um dado com nome age e dentro dele eu vou guardar a informação de inputAge
+        //parseInt vai transformar tudo que estiver aqui dentro em um Int(inteiro) tranformando a string em inteiro, pois só assim o back end não dará problema
 
-      name: inputName.current.value, //Vou enviar um dado com nome name e dentro dele eu vou guardar a informação de inputName
-    }); //Ele irá acessar o meu servidor em usuários
+        name: inputName.current.value, //Vou enviar um dado com nome name e dentro dele eu vou guardar a informação de inputName
+      }); //Ele irá acessar o meu servidor em usuários
+      alert("Usuário cadastrado com sucesso!")
+      navigate("/list-users");
 
-    //após criar a função vá até o button e altere o type="submit" para type="button"
-    // console.log(inputName.current.value); para que o clicar em cadastar ele me traga somente o valor dentro do input
+      //após criar a função vá até o button e altere o type="submit" para type="button"
+      // console.log(inputName.current.value); para que o clicar em cadastar ele me traga somente o valor dentro do input
 
-    console.log(data); // O console.log server para guardar uma resposta pois o meu servidor sempre responde algo
+      console.log(data); // O console.log server para guardar uma resposta pois o meu servidor sempre responde algo
+    } catch (error) {
+      handleApiError(error)
+    }
   }
+
 
   return (
     <Container>
@@ -78,7 +86,7 @@ const Home = () => {
           Cadastrar Usuários!
         </Button>
       </div>
-      <Button type="button" onClick={() => navigate("/lista-de-usuarios")}>
+      <Button type="button" onClick={() => navigate("/list-users")}>
         Ver lista de usuários
       </Button>
       {/* Para que ao clicar me leve para outra página */}

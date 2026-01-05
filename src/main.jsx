@@ -9,7 +9,7 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/* <Home /> */}
     <RouterProvider router={router} />{" "}
-    {/*Importa o router={router}  após o routerProvider*/}
+    {/*Importar o router={router}  após o routerProvider*/}
     <GlobalStyles />
   </StrictMode>
 );

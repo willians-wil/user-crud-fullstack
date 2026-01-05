@@ -11,14 +11,14 @@ export const Container = styled.div`
 `;
 export const ContainerUsers = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr; //Separa a tela em dois, e divide uma fração para cada, se fosse 3fr 1fr dividiria em 4 partes onde seria 3 para um e 1 para outro
+  grid-template-columns: 1fr 1fr; /*Separa a tela em dois, e divide uma fração para cada, se fosse 3fr 1fr dividiria em 4 partes onde seria 3 para um e 1 para outro*/
   gap: 20px;
   margin: 5px 0;
 
-  //Configuração de responsividade
+  /*Configuração de responsividade*/
 
   @media (max-width: 750px) {
-    grid-template-columns: 1fr; //Quando a minha tela chegar a um limite de 750 px ele quebra em apenas 1 coluna ou 1fr (uma fração)
+    grid-template-columns: 1fr; /*Quando a minha tela chegar a um limite de 750 px ele quebra em apenas 1 coluna ou 1fr (uma fração)*/
   }
 `;
 export const CardUsers = styled.div`
@@ -26,10 +26,10 @@ export const CardUsers = styled.div`
   padding: 16px;
   border-radius: 32px;
   display: flex;
-  justify-content: space-between; //distribuir os elementos de forma que o espaço restante seja dividido igualmente entre os itens
+  justify-content: space-between; /*distribuir os elementos de forma que o espaço restante seja dividido igualmente entre os itens*/
   align-items: center;
   gap: 20px;
-  max-width: 380px; //define a largura máxima de um elemento, impedindo que ele cresça além de um valor específico
+  max-width: 380px; /*define a largura máxima de um elemento, impedindo que ele cresça além de um valor específico*/
 
   h3 {
     color: #fff;
