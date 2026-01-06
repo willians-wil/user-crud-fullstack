@@ -1,88 +1,143 @@
-# 🧩 First Project with React
+# User CRUD Fullstack
 
-Este é o **meu primeiro projeto desenvolvido com React**, criado como parte do meu aprendizado em **desenvolvimento Front-end**.  
-O objetivo foi colocar em prática conceitos fundamentais do React, como **componentização, rotas, hooks e consumo de API**.
+Projeto **fullstack** de CRUD de usuários desenvolvido com **Node.js, Express, Prisma, MongoDB e React**, seguindo boas práticas de organização, padronização de erros HTTP e estrutura próxima ao ambiente profissional.
 
----
-
-## 🚀 Tecnologias Utilizadas
-
-- ⚛️ **React**
-- 🧭 **React Router DOM**
-- 💅 **Styled Components**
-- ⚙️ **Vite**
-- 📡 **Axios**
+Este projeto foi construído com foco em **aprendizado prático**, **qualidade de código** e **preparação para o mercado**, simulando um cenário real de aplicação utilizada em ambientes corporativos.
 
 ---
 
-## 📚 Aprendizados
+## 🧩 Funcionalidades
 
-Durante o desenvolvimento deste projeto, pratiquei:
-- Estruturação de um projeto React com Vite  
-- Criação e reutilização de componentes funcionais  
-- Estilização com Styled Components  
-- Navegação entre páginas com React Router  
-- Uso de **useState** e **useEffect**  
-- Consumo de APIs com Axios  
+### Backend
 
----
+- Criar usuário
+- Listar usuários
+- Buscar usuário por ID
+- Atualizar usuário
+- Deletar usuário
+- Validações de dados
+- Padronização de erros HTTP (400, 404, 409, 500)
 
-## 🖥️ Funcionalidades
+### Frontend
 
-- Exibição de uma lista de usuários  
-- Consumo de uma API simulada para obter dados  
-- Navegação entre páginas (Home e Lista de Usuários)  
-- Interface simples e responsiva  
-
----
-
-## 📂 Estrutura do Projeto
-
-src/
-┣ 📁 assets
-┣ 📁 components
-┣ 📁 pages
-┣ 📁 services
-┣ 📁 styles
-┣ 📜 main.jsx
-┗ 📜 routes.jsx
-
-
+- Listagem de usuários
+- Criação de usuário
+- Edição de usuário
+- Exclusão de usuário
+- Requisições centralizadas em um handler de API
+- Tratamento de estados de carregamento e erro
 
 ---
 
-## ⚙️ Como Rodar o Projeto
+## 🛠️ Tecnologias utilizadas
+
+### Backend
+
+- Node.js
+- Express
+- Prisma ORM
+- MongoDB
+
+### Frontend
+
+- React
+- React Router DOM
+- Axios
+
+---
+
+## 📁 Estrutura do projeto
+
+```
+user-crud-fullstack
+├─ backend
+│  ├─ prisma
+│  ├─ src
+│  │  ├─ controllers
+│  │  ├─ routes
+│  │  └─ server.js
+│  └─ package.json
+│
+├─ frontend
+│  ├─ src
+│  │  ├─ pages
+│  │  ├─ services
+│  │  └─ routes.jsx
+│  └─ package.json
+│
+├─ .gitignore
+└─ README.md
+```
+
+---
+
+## 🚀 Como rodar o projeto localmente
+
+### Pré-requisitos
+
+- Node.js instalado
+- MongoDB em execução (local ou cloud)
+- Gerenciador de pacotes (npm ou yarn)
+
+### Backend
 
 ```bash
-# Clone este repositório
-git clone https://github.com/willians-wil/first-project-with-react.git
-
-# Acesse a pasta do projeto
-cd first-project-with-react
-
-# Instale as dependências
+cd backend
 npm install
-
-# Inicie o servidor local
+npx prisma generate
 npm run dev
+```
 
-O projeto estará disponível em:
-👉 http://localhost:5173
+O servidor iniciará em:
 
-🧠 Próximos Passos
+```
+http://localhost:3333
+```
 
-Adicionar novas rotas e componentes
+### Frontend
 
-Integrar uma API real
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-Implementar validação de formulários
+A aplicação React iniciará em:
 
-Publicar o projeto online (Vercel ou Netlify)
+```
+http://localhost:5173
+```
 
-👨‍💻 Autor
+---
 
-Willians Narcizzo
-📍 Desenvolvedor Front-end em formação
-💼 Meu GitHub
+## 🔗 Endpoints da API
 
-⭐ Se você gostou, não esqueça de deixar uma estrela no repositório!
+| Método | Rota          | Descrição               |
+| ------ | ------------- | ----------------------- |
+| GET    | /usuarios     | Lista todos os usuários |
+| GET    | /usuarios/:id | Busca usuário por ID    |
+| POST   | /usuarios     | Cria novo usuário       |
+| PUT    | /usuarios/:id | Atualiza usuário        |
+| DELETE | /usuarios/:id | Remove usuário          |
+
+---
+
+## 📌 Padrões aplicados
+
+- Separação de responsabilidades (routes, controllers)
+- Código limpo e legível
+- Tratamento consistente de erros
+- Estrutura preparada para escalar
+- Projeto organizado para futura integração com CI/CD
+
+---
+
+## 🎯 Objetivo do projeto
+
+Este projeto tem como objetivo consolidar conhecimentos em **desenvolvimento fullstack**, boas práticas de API REST e integração frontend/backend, servindo como **item de portfólio profissional**.
+
+---
+
+## 👤 Autor
+
+Desenvolvido por **Willians Narciso**.

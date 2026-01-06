@@ -6,10 +6,11 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
   padding: 20px;
 `;
+
 export const ContainerUsers = styled.div`
+  
   display: grid;
   grid-template-columns: 1fr 1fr; /*Separa a tela em dois, e divide uma fração para cada, se fosse 3fr 1fr dividiria em 4 partes onde seria 3 para um e 1 para outro*/
   gap: 20px;
