@@ -1,4 +1,4 @@
-# User CRUD Fullstack
+# User CRUD Fullstack - Aplicação Fullstack com React, Node.js e Prisma
 
 Projeto **fullstack** de CRUD de usuários desenvolvido com **Node.js, Express, Prisma, MongoDB e React**, seguindo boas práticas de organização, padronização de erros HTTP e estrutura próxima ao ambiente profissional.
 
@@ -179,3 +179,4 @@ Atualmente, o projeto encontra-se **funcional e organizado**, simulando um cená
 ## 👤 Autor
 
 Desenvolvido por **Willians Narciso**.
+
