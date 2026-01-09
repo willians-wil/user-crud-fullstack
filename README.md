@@ -147,7 +147,10 @@ Consolidar conhecimentos em desenvolvimento fullstack, APIs REST e integração 
 ✅ Funcionalidades principais concluídas
 🔄 Projeto funcional, estável e organizado
 
+---
+
 👤 Autor
 
 Desenvolvido por Willians Narciso
+
 
